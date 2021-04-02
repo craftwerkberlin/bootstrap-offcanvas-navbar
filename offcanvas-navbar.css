@@ -1,0 +1,174 @@
+body {
+    padding-top: 4.5rem;
+}
+
+/* Hide default backdrop */
+.offcanvas-backdrop::before {
+    display: none;
+}
+
+/* Place backdrop before toggler instead to display between navbar and offcanvas */
+.navbar-offcanvas-toggler::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
+}
+
+/*  Show backdrop via .offcanvas-backdrop body class */
+.offcanvas-backdrop .navbar-offcanvas-toggler::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Expand-sm */
+@media (min-width: 576px) {
+
+    .navbar-expand-sm .offcanvas .offcanvas-header {
+        display: none;
+    }
+
+    .navbar-expand-sm .offcanvas {
+        position: inherit;
+        bottom: 0;
+        z-index: 1000;
+        flex-grow: 1;
+        visibility: visible !important;
+        background-color: transparent;
+        transition: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .navbar-expand-sm .offcanvas .offcanvas-body {
+        flex-grow: 0;
+        padding: 0;
+        overflow-y: visible;
+        display: flex;
+    }
+
+}
+
+/* Expand-md */
+@media (min-width: 768px) {
+
+    .navbar-expand-md .offcanvas .offcanvas-header {
+        display: none;
+    }
+
+    .navbar-expand-md .offcanvas {
+        position: inherit;
+        bottom: 0;
+        z-index: 1000;
+        flex-grow: 1;
+        visibility: visible !important;
+        background-color: transparent;
+        transition: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .navbar-expand-md .offcanvas .offcanvas-body {
+        flex-grow: 0;
+        padding: 0;
+        overflow-y: visible;
+        display: flex;
+    }
+
+}
+
+/* Expand-lg */
+@media (min-width: 992px) {
+
+    .navbar-expand-lg .offcanvas .offcanvas-header {
+        display: none;
+    }
+
+    .navbar-expand-lg .offcanvas {
+        position: inherit;
+        bottom: 0;
+        z-index: 1000;
+        flex-grow: 1;
+        visibility: visible !important;
+        background-color: transparent;
+        transition: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .navbar-expand-lg .offcanvas .offcanvas-body {
+        flex-grow: 0;
+        padding: 0;
+        overflow-y: visible;
+        display: flex;
+    }
+
+}
+
+/* Expand-xl */
+@media (min-width: 1200px) {
+
+    .navbar-expand-xl .offcanvas .offcanvas-header {
+        display: none;
+    }
+
+    .navbar-expand-xl .offcanvas {
+        position: inherit;
+        bottom: 0;
+        z-index: 1000;
+        flex-grow: 1;
+        visibility: visible !important;
+        background-color: transparent;
+        transition: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .navbar-expand-xl .offcanvas .offcanvas-body {
+        flex-grow: 0;
+        padding: 0;
+        overflow-y: visible;
+        display: flex;
+    }
+
+}
+
+/* Expand-xxl */
+@media (min-width: 1400px) {
+
+    .navbar-expand-xxl .offcanvas .offcanvas-header {
+        display: none;
+    }
+
+    .navbar-expand-xxl .offcanvas {
+        position: inherit;
+        bottom: 0;
+        z-index: 1000;
+        flex-grow: 1;
+        visibility: visible !important;
+        background-color: transparent;
+        transition: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .navbar-expand-xxl .offcanvas .offcanvas-body {
+        flex-grow: 0;
+        padding: 0;
+        overflow-y: visible;
+        display: flex;
+    }
+
+}
