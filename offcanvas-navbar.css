@@ -1,5 +1,5 @@
 body {
-    padding-top: 4.5rem;
+    padding-top: 6rem;
 }
 
 /* Hide default backdrop */
@@ -7,7 +7,7 @@ body {
     display: none;
 }
 
-/* Place backdrop before toggler instead to display between navbar and offcanvas */
+/* Place backdrop before navbar-toggler instead to display between navbar and offcanvas */
 .navbar-offcanvas-toggler::before {
     content: "";
     position: fixed;
@@ -17,6 +17,7 @@ body {
     height: 100vh;
     background: rgba(0, 0, 0, .5);
     cursor: pointer;
+    z-index: 1020;
     visibility: hidden;
     opacity: 0;
     transition: all .4s;
