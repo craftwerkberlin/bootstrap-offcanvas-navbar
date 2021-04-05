@@ -1,30 +1,35 @@
 body {
-    padding-top: 6rem;
+    padding-top: 5rem;
 }
 
-/* Hide default backdrop */
-.offcanvas-backdrop::before {
+/* Hide default backdrop if a navbar has class fixed-top */
+.navbar-fixed-top-offcanvas.offcanvas-backdrop::before {
     display: none;
 }
 
+/* Navbar fixed-top z-index  */
+.navbar.fixed-top {
+    z-index: 1031;
+}
+
 /* Place backdrop before navbar-toggler instead to display between navbar and offcanvas */
-.navbar-offcanvas-toggler::before {
+.navbar-offcanvas-backdrop::before {
     content: "";
     position: fixed;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
     background: rgba(0, 0, 0, .5);
     cursor: pointer;
-    z-index: 1020;
+    z-index: 1031;
     visibility: hidden;
     opacity: 0;
-    transition: all .4s;
+    transition: visibility .15s linear, opacity .15s linear;
 }
 
 /*  Show backdrop via .offcanvas-backdrop body class */
-.offcanvas-backdrop .navbar-offcanvas-toggler::before {
+.offcanvas-backdrop .navbar-offcanvas-backdrop::before {
     visibility: visible;
     opacity: 1;
 }
@@ -39,14 +44,13 @@ body {
     .navbar-expand-sm .offcanvas {
         position: inherit;
         bottom: 0;
-        z-index: 1000;
         flex-grow: 1;
         visibility: visible !important;
-        background-color: transparent;
         transition: none;
         transform: none;
         border-left: none;
         border-right: none;
+        z-index: 1030;
     }
 
     .navbar-expand-sm .offcanvas .offcanvas-body {
@@ -54,6 +58,17 @@ body {
         padding: 0;
         overflow-y: visible;
         display: flex;
+    }
+
+    .navbar-expand-sm .offcanvas-bottom {
+        border-top: none;
+        height: auto;
+    }
+
+    /* Override background-color in case bg-* color classes are used */
+    .navbar-expand-sm .offcanvas,
+    .navbar-expand-sm .offcanvas .offcanvas-body {
+        background-color: transparent !important;
     }
 
 }
@@ -68,14 +83,13 @@ body {
     .navbar-expand-md .offcanvas {
         position: inherit;
         bottom: 0;
-        z-index: 1000;
         flex-grow: 1;
         visibility: visible !important;
-        background-color: transparent;
         transition: none;
         transform: none;
         border-left: none;
         border-right: none;
+        z-index: 1030;
     }
 
     .navbar-expand-md .offcanvas .offcanvas-body {
@@ -83,6 +97,18 @@ body {
         padding: 0;
         overflow-y: visible;
         display: flex;
+
+    }
+
+    .navbar-expand-md .offcanvas-bottom {
+        border-top: none;
+        height: auto;
+    }
+
+    /* Override background-color in case bg-* color classes are used */
+    .navbar-expand-md .offcanvas,
+    .navbar-expand-md .offcanvas .offcanvas-body {
+        background-color: transparent !important;
     }
 
 }
@@ -97,14 +123,13 @@ body {
     .navbar-expand-lg .offcanvas {
         position: inherit;
         bottom: 0;
-        z-index: 1000;
         flex-grow: 1;
         visibility: visible !important;
-        background-color: transparent;
         transition: none;
         transform: none;
         border-left: none;
         border-right: none;
+        z-index: 1030;
     }
 
     .navbar-expand-lg .offcanvas .offcanvas-body {
@@ -112,6 +137,17 @@ body {
         padding: 0;
         overflow-y: visible;
         display: flex;
+    }
+
+    .navbar-expand-lg .offcanvas-bottom {
+        border-top: none;
+        height: auto;
+    }
+
+    /* Override background-color in case bg-* color classes are used */
+    .navbar-expand-lg .offcanvas,
+    .navbar-expand-lg .offcanvas .offcanvas-body {
+        background-color: transparent !important;
     }
 
 }
@@ -126,14 +162,13 @@ body {
     .navbar-expand-xl .offcanvas {
         position: inherit;
         bottom: 0;
-        z-index: 1000;
         flex-grow: 1;
         visibility: visible !important;
-        background-color: transparent;
         transition: none;
         transform: none;
         border-left: none;
         border-right: none;
+        z-index: 1030;
     }
 
     .navbar-expand-xl .offcanvas .offcanvas-body {
@@ -141,6 +176,17 @@ body {
         padding: 0;
         overflow-y: visible;
         display: flex;
+    }
+
+    .navbar-expand-xl .offcanvas-bottom {
+        border-top: none;
+        height: auto;
+    }
+
+    /* Override background-color in case bg-* color classes are used */
+    .navbar-expand-xl .offcanvas,
+    .navbar-expand-xl .offcanvas .offcanvas-body {
+        background-color: transparent !important;
     }
 
 }
@@ -155,7 +201,6 @@ body {
     .navbar-expand-xxl .offcanvas {
         position: inherit;
         bottom: 0;
-        z-index: 1000;
         flex-grow: 1;
         visibility: visible !important;
         background-color: transparent;
@@ -163,6 +208,7 @@ body {
         transform: none;
         border-left: none;
         border-right: none;
+        z-index: 1030;
     }
 
     .navbar-expand-xxl .offcanvas .offcanvas-body {
@@ -170,6 +216,17 @@ body {
         padding: 0;
         overflow-y: visible;
         display: flex;
+    }
+
+    .navbar-expand-xxl .offcanvas-bottom {
+        border-top: none;
+        height: auto;
+    }
+
+    /* Override background-color in case bg-* color classes are used */
+    .navbar-expand-xxl .offcanvas,
+    .navbar-expand-xxl .offcanvas .offcanvas-body {
+        background-color: transparent !important;
     }
 
 }
