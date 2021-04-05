@@ -7,13 +7,7 @@ body {
     content: none;
 }
 
-/* Navbar fixed-top z-index  */
-/*.navbar.fixed-top {
-    z-index: 1031;
-}
-*/
-
-/* Place backdrop before navbar-toggler instead to display between navbar and offcanvas */
+/* Place backdrop before .navbar instead to display between navbar and offcanvas if navbar has class .fixed-top */
 .navbar-fixed-top-offcanvas .navbar.fixed-top::before {
     content: "";
     position: fixed;
