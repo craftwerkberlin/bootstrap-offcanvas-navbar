@@ -4,16 +4,17 @@ body {
 
 /* Hide default backdrop if a navbar has class fixed-top */
 .navbar-fixed-top-offcanvas.offcanvas-backdrop::before {
-    display: none;
+    content: none;
 }
 
 /* Navbar fixed-top z-index  */
-.navbar.fixed-top {
+/*.navbar.fixed-top {
     z-index: 1031;
 }
+*/
 
 /* Place backdrop before navbar-toggler instead to display between navbar and offcanvas */
-.navbar-offcanvas-backdrop::before {
+.navbar-fixed-top-offcanvas .navbar.fixed-top::before {
     content: "";
     position: fixed;
     top: 0;
@@ -22,14 +23,13 @@ body {
     left: 0;
     background: rgba(0, 0, 0, .5);
     cursor: pointer;
-    z-index: 1031;
     visibility: hidden;
     opacity: 0;
     transition: visibility .15s linear, opacity .15s linear;
 }
 
 /*  Show backdrop via .offcanvas-backdrop body class */
-.offcanvas-backdrop .navbar-offcanvas-backdrop::before {
+.navbar-fixed-top-offcanvas.offcanvas-backdrop .navbar.fixed-top::before {
     visibility: visible;
     opacity: 1;
 }
@@ -50,7 +50,7 @@ body {
         transform: none;
         border-left: none;
         border-right: none;
-        z-index: 1030;
+        z-index: inherit;
     }
 
     .navbar-expand-sm .offcanvas .offcanvas-body {
@@ -89,7 +89,7 @@ body {
         transform: none;
         border-left: none;
         border-right: none;
-        z-index: 1030;
+        z-index: inherit;
     }
 
     .navbar-expand-md .offcanvas .offcanvas-body {
@@ -129,7 +129,7 @@ body {
         transform: none;
         border-left: none;
         border-right: none;
-        z-index: 1030;
+        z-index: inherit;
     }
 
     .navbar-expand-lg .offcanvas .offcanvas-body {
@@ -168,7 +168,7 @@ body {
         transform: none;
         border-left: none;
         border-right: none;
-        z-index: 1030;
+        z-index: inherit;
     }
 
     .navbar-expand-xl .offcanvas .offcanvas-body {
@@ -208,7 +208,7 @@ body {
         transform: none;
         border-left: none;
         border-right: none;
-        z-index: 1030;
+        z-index: inherit;
     }
 
     .navbar-expand-xxl .offcanvas .offcanvas-body {
