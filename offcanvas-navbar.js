@@ -1,5 +1,6 @@
+// jQuery Workaround, will be replaced by pure JavaScript
 
-// Check if navbar fixed-top component exists
+// Check if .navbar.fixed-top component exists
 if ($(".navbar.fixed-top")[0]){
     // Add body class to hide default .offcanvas-backdrop::before if .navbar.fixed-top exists
     $("body").addClass("navbar-fixed-top-offcanvas");

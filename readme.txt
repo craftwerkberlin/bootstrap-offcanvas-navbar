@@ -2,6 +2,10 @@ Bootstrap navbar Offcanvas Example
 
 == Changelog ==
 
+    = 1.1.2 - 06 April 2021 =
+    
+        * added description
+
     = 1.1.1 - 05 April 2021 =
     
         * set backdrop to .navbar::before

@@ -1,13 +1,10 @@
-body {
-    padding-top: 5rem;
-}
 
 /* Hide default backdrop if a navbar has class fixed-top */
 .navbar-fixed-top-offcanvas.offcanvas-backdrop::before {
     content: none;
 }
 
-/* Place backdrop before .navbar instead to display between navbar and offcanvas if navbar has class .fixed-top */
+/* Place backdrop before navbar-toggler instead to display between navbar and offcanvas */
 .navbar-fixed-top-offcanvas .navbar.fixed-top::before {
     content: "";
     position: fixed;
