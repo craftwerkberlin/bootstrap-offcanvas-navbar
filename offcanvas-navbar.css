@@ -1,30 +1,4 @@
 
-/* Hide default backdrop if a navbar has class fixed-top */
-.navbar-fixed-top-offcanvas.offcanvas-backdrop::before {
-    content: none;
-}
-
-/* Place backdrop before navbar-toggler instead to display between navbar and offcanvas */
-.navbar-fixed-top-offcanvas .navbar.fixed-top::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
-    cursor: pointer;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility .15s linear, opacity .15s linear;
-}
-
-/*  Show backdrop via .offcanvas-backdrop body class */
-.navbar-fixed-top-offcanvas.offcanvas-backdrop .navbar.fixed-top::before {
-    visibility: visible;
-    opacity: 1;
-}
-
 /* Expand-sm */
 @media (min-width: 576px) {
 
