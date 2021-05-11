@@ -2,6 +2,10 @@ Bootstrap navbar Offcanvas Example
 
 == Changelog ==
 
+    = 1.1.5 - 11 May 2021 =
+    
+        * Added offcanvas-top
+
     = 1.1.4 - 07 May 2021 =
     
         * Update Bootstrap 5.0.0
