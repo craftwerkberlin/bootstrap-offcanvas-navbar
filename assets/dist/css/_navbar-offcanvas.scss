@@ -1,0 +1,50 @@
+.navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        // stylelint-disable-next-line scss/selector-no-union-class-name
+        &#{$infix} {
+            @include media-breakpoint-up($next) {
+                .offcanvas {
+                    .offcanvas-header {
+                        display: none;
+                    }
+
+                    position: inherit;
+                    bottom: 0;
+                    flex-grow: 1;
+                    visibility: visible !important;
+                    transition: none;
+                    transform: none;
+                    border-left: none;
+                    border-right: none;
+                    z-index: inherit;
+
+                    .offcanvas-body {
+                        flex-grow: 0;
+                        padding: 0;
+                        overflow-y: visible;
+                        display: flex;
+                    }
+                }
+
+                .offcanvas-top,
+                .offcanvas-bottom {
+                    border-top: none;
+                    border-bottom: none;
+                    height: auto;
+                }
+                
+                // Override background-color in case bg-* color classes are used
+                .offcanvas {
+                    background-color: transparent !important;
+
+                    .offcanvas-body {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+}

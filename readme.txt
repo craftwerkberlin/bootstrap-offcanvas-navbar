@@ -1,6 +1,11 @@
-Bootstrap navbar Offcanvas Example
+Bootstrap Navbar Offcanvas Example
 
 == Changelog ==
+
+    = 1.1.6 - 12 May 2021 =
+    
+        * Used _navbar-offcanvas.scss instead of additional.css
+        * Added logos & Favicons
 
     = 1.1.5 - 11 May 2021 =
     
