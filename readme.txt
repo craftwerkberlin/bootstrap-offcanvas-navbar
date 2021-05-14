@@ -2,6 +2,11 @@ Bootstrap Navbar Offcanvas Example
 
 == Changelog ==
 
+    = 1.1.7 - 14 May 2021 =
+    
+        * Bootstrap 5.0.1
+        * Added offcanvas-{light | dark} classes to override navbar-{light | dark} in collapsed offcanvas
+
     = 1.1.6 - 12 May 2021 =
     
         * Used _navbar-offcanvas.scss instead of additional.css

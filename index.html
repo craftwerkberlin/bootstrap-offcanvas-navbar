@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <title>Offcanvas Component Navbar Example · Bootstrap 5.0.0</title>
+    <title>Offcanvas Component Navbar Example · Bootstrap 5.0.1</title>
 
     <link rel="canonical" href="https://examples.bootscore.me/bootstrap-offcanvas-navbar/">
     <!-- Bootstrap core CSS -->
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -20,22 +20,22 @@
     <link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
     <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3">
-    
+
 </head>
 
-<body>
+<body class="pb-5">
 
-    <!-- expand-none fixed-top -->
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <!-- expand-lg fixed-top -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-none fixed-top right</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarExample-expand-none" aria-controls="offcanvasNavbarExample-expand-none">
-                <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-none"></span>
+            <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-lg fixed-top right</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarExample-expand-lg-1" aria-controls="offcanvasNavbarExample-expand-lg-1">
+                <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-lg-1"></span>
             </button>
-            <div class="offcanvas offcanvas-end" data-bs-hideresize="true" tabindex="-1" id="offcanvasNavbarExample-expand-none" aria-labelledby="offcanvasNavbarExample-expand-noneLabel">
-                <div class="offcanvas-header">
+            <div class="offcanvas offcanvas-end offcanvas-light" data-bs-hideresize="true" tabindex="-1" id="offcanvasNavbarExample-expand-lg-1" aria-labelledby="offcanvasNavbarExample-expand-lg-1Label">
+                <div class="offcanvas-header bg-dark text-white">
                     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -64,7 +64,7 @@
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-danger" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -74,8 +74,16 @@
     <main>
 
         <div class="container mt-5 pt-3">
-            <h1 class="mt-3">Offcanvas Navbars</h1>
-            <p class="lead">These navbars open collapsed content in offcanvas component. Navbar, offcanvas, offcanvas-header and offcanvas-body can have their own background-colors using the <code>bg{-primary|-secondary|-success|-info|-warning|-danger|-light|-dark}</code> classes.</p>
+
+            <div class="card my-4 bg-light">
+                <div class="card-body p-4">
+                    <h1 class="">Offcanvas Navbars</h1>
+                    <p class="lead mb-0">These navbars open collapsed content in offcanvas component. Resize browser window and click the navbar-toggler icon.</p>
+                </div>
+            </div>
+
+
+
         </div>
 
         <!-- exband-xxl -->
@@ -308,10 +316,56 @@
             </div>
         </nav>
 
+        <!-- expand-none fixed-bottom -->
+        <nav class="navbar navbar-dark bg-danger fixed-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-0 fixed-bottom bottom</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarExample-expand-none-bottom" aria-controls="offcanvasNavbarExample-expand-none-bottom">
+                    <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-none-bottom"></span>
+                </button>
+                <div class="offcanvas offcanvas-bottom" data-bs-hideresize="true" tabindex="-1" id="offcanvasNavbarExample-expand-none-bottom" aria-labelledby="offcanvasNavbarExample-expand-none-bottomLabel">
+                    <div class="offcanvas-header bg-danger text-white">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body bg-dark">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <!-- default navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo-black.svg" width="38" height="30" class="me-3" alt="Bootstrap">default expand-lg</a>
+                <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo-black.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-lg default</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -349,8 +403,87 @@
         </nav>
 
 
-        <section class="container mb-4">
-            <h2>Default Offcanvas <span class="text-secondary">(Does not close on resize)</span></h2>
+        <section class="container mb-5">
+
+            <h2>How it works</h2>
+            <h3>Component</h3>
+            <p>The offcanvas component is added inside the navbar and open collapsed navbar in offcanvas. Offcanvas is resetted by css above the breakpoints. Set breakpoints by using <code>navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> classes in navbar. Offcanvas can be placed on top, right, bottom and left by using <code>offcanvas{-top|-end|-bottom|-start}</code> classes.</p>
+
+
+            <h3>Colors</h3>
+            <p>Navbar, offcanvas, offcanvas-header and offcanvas-body can use independent background-colors using the <code>bg{-primary|-secondary|-success|-info|-warning|-danger|-light|-dark}</code> classes. For example, the navbar can use the class <code>bg-danger</code>, but offcanvas-header <code>bg-warning</code> and offcanvas-body <code>bg-dark</code>.</p>
+            <p>Using <code>navbar{-light|-dark}</code> classes in navbar can be resetted by adding <code>offcanvas{-light|-dark}</code> classes to offcanvas. This applies to <code>nav-Link</code>s only, not <code>navbar-brand</code> and <code>navbar-toggler</code>.</p>
+            <p>The fixed-top example uses <code>navbar navbar-dark bg-dark</code> but collapsed offcanvas uses white background. In this case class <code>offcanvas-light</code> class is added to offcanvas to show dark nav-links in white offcanvas-body.</p>
+
+            <h3>More Offcanvas</h3>
+
+            <!-- expand-lg -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-lg</a>
+                    <div class="order-lg-last flex-grow-1 flex-lg-grow-0 text-end">
+                        <button class="btn btn-outline-light ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarExample-more-offcanvas" aria-controls="offcanvasNavbarExample-more-offcanvas">
+                        <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-more-offcanvas"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end offcanvas-light" data-bs-hideresize="true" tabindex="-1" id="offcanvasNavbarExample-more-offcanvas" aria-labelledby="offcanvasNavbarExample-more-offcanvasLabel">
+                        <div class="offcanvas-header bg-dark text-white">
+                            <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- offcanvas-user -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasUser" aria-labelledby="offcanvasUserLabel">
+                <div class="offcanvas-header bg-dark text-white">
+                    <h5 class="offcanvas-title" id="offcanvasUserLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Other offcanvas-toggler can be used in navbar, but offcanvas component must be placed outside the <code>&#60;nav>...&#60;/nav></code> tag. Resize browser window to ≤991 px and click user-button and navbar-toggler.</p>
+            <h4>Default Offcanvas <span class="text-secondary">(Does not close on resize)</span></h4>
             <button class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
             <button class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
             <button class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
@@ -381,10 +514,8 @@
                     <p>Try scrolling the rest of the page to see this option in action.</p>
                 </div>
             </div>
-        </section>
-
-        <section class="container mb-4">
-            <h2>Modal</h2>
+            
+            <h3>Modal</h3>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
@@ -408,23 +539,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="container mb-4">
-            <h2>Text to test body scrolling</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
-        </section>
-
     </main>
 
     <!-- bootstrap.bundle.min.js -->

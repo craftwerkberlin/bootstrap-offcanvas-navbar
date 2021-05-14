@@ -1,9 +1,9 @@
+// Reset offcanvas above the breakpoints Start
 .navbar-expand {
     @each $breakpoint in map-keys($grid-breakpoints) {
         $next: breakpoint-next($breakpoint, $grid-breakpoints);
         $infix: breakpoint-infix($next, $grid-breakpoints);
 
-        // stylelint-disable-next-line scss/selector-no-union-class-name
         &#{$infix} {
             @include media-breakpoint-up($next) {
                 .offcanvas {
@@ -35,8 +35,8 @@
                     border-bottom: none;
                     height: auto;
                 }
-                
-                // Override background-color in case bg-* color classes are used
+
+                // Reset background-color in case bg-* color classes are used in offcanvas
                 .offcanvas {
                     background-color: transparent !important;
 
@@ -48,3 +48,51 @@
         }
     }
 }
+// Reset offcanvas above the breakpoints End
+
+// Enable offcanvas-{dark | light} classes to set nav-link colors in offcanvas independently of navbar-{dark | light} classes Start
+.navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+            @include media-breakpoint-down($next) {
+                .offcanvas-light .nav-link {
+                    color: $navbar-light-color;
+
+                    &:hover,
+                    &:focus {
+                        color: $navbar-light-hover-color;
+                    }
+
+                    &.disabled {
+                        color: $navbar-light-disabled-color;
+                    }
+
+                    &.active {
+                        color: $navbar-light-active-color;
+                    }
+                }
+
+                .offcanvas-dark .nav-link {
+                    color: $navbar-dark-color;
+
+                    &:hover,
+                    &:focus {
+                        color: $navbar-dark-hover-color;
+                    }
+
+                    &.disabled {
+                        color: $navbar-dark-disabled-color;
+                    }
+
+                    &.active {
+                        color: $navbar-dark-active-color;
+                    }
+                }
+            }
+        }
+    }
+}
+// Enable offcanvas-{dark | light} classes to set nav-link colors in offcanvas independently of navbar-{dark | light} classes End
