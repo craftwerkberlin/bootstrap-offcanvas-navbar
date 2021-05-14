@@ -234,7 +234,7 @@
                 <div class="offcanvas offcanvas-bottom bg-dark" data-bs-hideresize="true" tabindex="-1" id="offcanvasNavbarExample-expand-md" aria-labelledby="offcanvasNavbarExample-expand-mdLabel">
                     <div class="offcanvas-header text-light">
                         <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -319,7 +319,7 @@
         <!-- expand-none fixed-bottom -->
         <nav class="navbar navbar-dark bg-danger fixed-bottom">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-0 fixed-bottom bottom</a>
+                <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">fixed-bottom bottom</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarExample-expand-none-bottom" aria-controls="offcanvasNavbarExample-expand-none-bottom">
                     <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-none-bottom"></span>
                 </button>
@@ -407,20 +407,23 @@
 
             <h2>How it works</h2>
             <h3>Component</h3>
-            <p>The offcanvas component is added inside the navbar and open collapsed navbar in offcanvas. Offcanvas is resetted by css above the breakpoints. Set breakpoints by using <code>navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> classes in navbar. Offcanvas can be placed on top, right, bottom and left by using <code>offcanvas{-top|-end|-bottom|-start}</code> classes.</p>
+            <p>The offcanvas component is placed inside the navbar and wraps the navbar content. Offcanvas is reset by css above the breakpoints. Set breakpoints by using <code>navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> classes in navbar. Offcanvas can be placed on top, right, bottom and left by using <code>offcanvas{-top|-end|-bottom|-start}</code> classes.</p>
 
+            <h3>Resize</h3>
+            <p>Offcanvas must close when resizing the window through the breakpoints. Turning a tablet from portrait to landscape mode with <code>expand-lg</code> navbar will hide the offcanvas but not the backdrop and body scroll is still locked.</p> 
+            <p>Add <code>data-bs-hideresize="true"</code> to offcanvas and it will close when resizing the window.</p>
 
             <h3>Colors</h3>
             <p>Navbar, offcanvas, offcanvas-header and offcanvas-body can use independent background-colors using the <code>bg{-primary|-secondary|-success|-info|-warning|-danger|-light|-dark}</code> classes. For example, the navbar can use the class <code>bg-danger</code>, but offcanvas-header <code>bg-warning</code> and offcanvas-body <code>bg-dark</code>.</p>
-            <p>Using <code>navbar{-light|-dark}</code> classes in navbar can be resetted by adding <code>offcanvas{-light|-dark}</code> classes to offcanvas. This applies to <code>nav-Link</code>s only, not <code>navbar-brand</code> and <code>navbar-toggler</code>.</p>
-            <p>The fixed-top example uses <code>navbar navbar-dark bg-dark</code> but collapsed offcanvas uses white background. In this case class <code>offcanvas-light</code> class is added to offcanvas to show dark nav-links in white offcanvas-body.</p>
+            <p>Using <code>navbar{-light|-dark}</code> classes in navbar can be reset by adding <code>offcanvas{-light|-dark}</code> classes to offcanvas. This applies to <code>nav-link</code>s only, not <code>navbar-brand</code> and <code>navbar-toggler</code>.</p>
+            <p>The fixed-top example uses <code>navbar navbar-dark bg-dark</code> but collapsed offcanvas uses white background. In this case class <code>offcanvas-light</code> class is added to offcanvas to show dark contrast nav-links in white offcanvas-body.</p>
 
             <h3>More Offcanvas</h3>
 
             <!-- expand-lg -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-lg</a>
+                    <a class="navbar-brand" href="#"><img src="assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">expand-lg</a>
                     <div class="order-lg-last flex-grow-1 flex-lg-grow-0 text-end">
                         <button class="btn btn-outline-light ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -472,7 +475,7 @@
                     <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <p>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
+                    <p>This offcanvas is placed outside the <code>&#60;nav>...&#60;/nav></code> tag.</p>
                     <ul class="list-group">
                         <li class="list-group-item">An item</li>
                         <li class="list-group-item">A second item</li>
